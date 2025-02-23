@@ -1,0 +1,22 @@
+#include <stdio.h>
+int main()
+{
+	int n,re;
+	int num(int n);
+	scanf("%d",&n);
+	re=num(n);
+	printf("%d",re);
+	return 0;
+}
+
+int num(int n)
+{
+	int ret;
+	if(n==2)ret=1;
+	if(n==3)ret=2;
+	if(n>=4)
+	{
+		ret=num(n-1)*(n-1)+num(n-2)*(n-1);
+	}
+	return ret;
+}
